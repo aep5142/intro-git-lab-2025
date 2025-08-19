@@ -6,6 +6,8 @@ Additionally, today you'll be submitting at the end via Gradescope-- a tool used
 
 Don't worry, we won't be grading your work, submitting is merely to help you get acquainted with tools you'll be using in many classes.
 
+This file is written in markdown.  You can view the formatted document in VS Code using a keyboard shortcut: on macOS use CMD+k v and on Windows use Ctrl+K v.
+
 ## Part 1 - Making a First Commit
 
 Whenever you have made a change that you wish to keep, you'll make a git commit.
@@ -15,6 +17,7 @@ Open up 'part1.txt' using `code` and answer the questions.
 When you've done so, add a commit with the message "part 1 done!"
 
 Run `python3 check.py 1` to check that your commit exists and is correct.
+
 
 ## Part 2 - Making & Reverting Changes with `git restore`
 
@@ -32,9 +35,21 @@ Then take a look at these changes with `git diff`, open up part3.txt and answer 
 
 Be sure to commit your changes! There is no `check.py` step for this part.
 
-## Part 4 - Finding a Change in the `git log`
+## Part 4 -- Push your changes to GitHub
 
-The answer to part 4 is in the git history. Use `git log` to find the commit in question.
+Have a look at your repository on GitHub.  Open a browser window to: URL.  Do you see your changes?  No!  Why?
+
+Now use the `git status` command to verify that all your changes have been committed.
+
+Once all of your changes have been committed, push them to GitHub using the command: `git push origin main`.
+
+If this command succeeded, your changes should now be visible on GitHub.
+
+There is no `check.py` step for this part.
+
+## Part 5 - Finding a Change in the `git log`
+
+The answer to part 5 is in the git history. Use `git log` to find the commit in question.
 
 You'll see that each commit has a hash, like 'de8e74bc2c3ec106554440021efd1ec6808486c2'.
 These uniquely identify each commit.
@@ -56,3 +71,13 @@ Consider what part 4 means for actual secrets, such as a password or other sensi
 It is difficult to _actually remove_ sensitive information from a published Git repository.
 
 For this reason, be sure to avoid committing passwords or other information that you wouldn't want someone to see.
+
+## Part 6 -- Push your changes from Part 5 to GitHub
+
+Create a commit for the changes you made in Part 5 and push it to GitHub. 
+
+Hint: you used `git push origin main` to push your first commit to GitHub.  You can use `git push` for subsequent pushes of this repository.
+
+Now use the `git status` command to verify that all your changes have been committed and pushed.
+
+There is no `check.py` step for this part.
