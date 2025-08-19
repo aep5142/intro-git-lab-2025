@@ -7,7 +7,7 @@ HIDDEN_FILE = ".part2-done"
 
 def check_git_output(command, contains):
     output = subprocess.run(["git", command], capture_output=True).stdout.decode()
-    if contains in output.lower():
+    if contains.lower() in output.lower():
         return True
     else:
         return False
@@ -53,6 +53,19 @@ def check_part2():
                 f.write(":)")
 
 
+def check_part3():
+    if check_status_clean():
+        print("Part 3: Complete!")
+    else:
+        print("Make sure to commit the changes!");
+
+def check_part4():
+    if check_git_output("status", "Your branch is up to date with 'origin/main'"):
+        print("Part 4: Complete!")
+    else:
+        print("Make sure to push your changes to GitHub!");
+        
+
 def check_part5():
     part5_text = pathlib.Path("part5.txt").read_text()
     if "snowfall" not in part5_text:
@@ -66,13 +79,14 @@ if __name__ == "__main__":
         print(
             "Be sure to pass the part you are checking, e.g. `python3 check.py` 1 for part 1"
         )
+        sys.exit(1)
     if sys.argv[1] == "1":
         check_part1()
     elif sys.argv[1] == "2":
         check_part2()
     elif sys.argv[1] == "3":
-        print("There is no automated checking for part 3.")
+        check_part3()
     elif sys.argv[1] == "4":
-        print("There is no automated checking for part 4.")
+        check_part4()
     elif sys.argv[1] == "5":
         check_part5()
