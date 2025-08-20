@@ -16,24 +16,24 @@ Open up 'part1.txt' using `code` and answer the questions.
 
 When you've done so, add a commit with the message "part 1 done!"
 
-Run `python3 check.py 1` to check that your commit exists and is correct.
+Run `uv run python check.py 1` to check that your commit exists and is correct.
 
 
 ## Part 2 - Making & Reverting Changes with `git restore`
 
 Open up the file 'part2.txt' and make the modifications it describes. (Do not commit them yet!)
 
-Run the command `python3 check.py 2` which will verify that these changes are made.
+Run the command `uv run python check.py 2` which will verify that these changes are made.
 
-Once you've run this command, undo the changes using git restore and run `python3 check.py 2` again.
+Once you've run this command, undo the changes using git restore and run `uv run python check.py 2` again.
 
 ## Part 3 - Viewing Changes with `git diff`
 
-Run the command `python3 changes.py` this will make some changes to your local files, but will not commit them. (Do not commit them either!)
+Run the command `uv run python changes.py` this will make some changes to your local files, but will not commit them. (Do not commit them either!)
 
 Then take a look at these changes with `git diff`, open up part3.txt and answer the questions based on the changes you see.
 
-Be sure to commit your changes! There is no `check.py` step for this part.
+Be sure to commit your changes! Run the command `uv run python check.py 3` to verify that you have committed your changes.
 
 ## Part 4 -- Push your changes to GitHub
 
@@ -45,7 +45,8 @@ Once all of your changes have been committed, push them to GitHub using the comm
 
 If this command succeeded, your changes should now be visible on GitHub.
 
-There is no `check.py` step for this part.
+Run the command `uv run python check.py 4` to verify that you have pushed your changes.
+
 
 ## Part 5 - Finding a Change in the `git log`
 
@@ -58,7 +59,7 @@ Once you find it, you can use `git show <hash-id>` to show what changed in that 
 
 **Tip:** If you are typing hashes instead of copying & pasting, you can type the first 4-5 characters instead of the entire thing.
 
-Use `git log` and `git show` to discover what used to be in the 'secret' file and add this text to part4.txt. You may use `python3 check.py 4` to confirm.
+Use `git log` and `git show` to discover what used to be in the 'secret' file and add this text to part4.txt. You may use `uv run python check.py 4` to confirm.
 
 You can also try this using the GitHub interface which offers an alternative interface to view the log:
 
@@ -78,6 +79,4 @@ Create a commit for the changes you made in Part 5 and push it to GitHub.
 
 Hint: you used `git push origin main` to push your first commit to GitHub.  You can use `git push` for subsequent pushes of this repository.
 
-Now use the `git status` command to verify that all your changes have been committed and pushed.
-
-There is no `check.py` step for this part.
+Now use the `git status` command to verify that all your changes have been committed and pushed.  If the result of this command does not show any changes to be committed or untracked files and includes the line `Your branch is up to date with 'origin/main'.`, then you are all set!
