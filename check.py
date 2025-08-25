@@ -67,9 +67,24 @@ def check_part4():
         
 
 def check_part5():
+    # Run the git log command
+    output = subprocess.run(["git", "log"], capture_output=True).stdout.decode()
+
+    # The relevant commit SHA is the last one before the "part 1 done" message
+    # Find the "part 1 done" message
+    part1_idx = output.lower().index("part 1 done")
+    # Look backwards from there to find the commit
+    start = output[:part1_idx].rindex("commit") + len("commit ") 
+    # The SHA runs from start to the next new line
+    end = output[start:].index("\n") 
+    # Extract the SHA
+    sha = output[start : start + end]                                                                                                                                         
+
+    print("sha:", sha)
+
     part5_text = pathlib.Path("part5.txt").read_text()
-    if "snowfall" not in part5_text:
-        print("Be sure to add the secret word to part5.txt.")
+    if sha not in part5_text:
+        print('Be sure to add the hash for the commit with the message "part 1 done" to part5.txt.')
     else:
         print("Great job, nearly done!")
 

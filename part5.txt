@@ -1,3 +1,4 @@
-Earlier in this repository's history, a secret was committed.  Find the secret word and add it to this file.
+Earlier in this lab, you created a commit with the commit message "part 1 done".
+What is hash value for this commit?
 
-Secret word: 
+part 1 done hash: 
