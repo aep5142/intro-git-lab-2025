@@ -10,9 +10,11 @@ use `Command-k v` and on WSL use `Ctrl-K v`.
 
 Whenever you have made a change that you wish to keep, you'll make a git commit.
 
-Open up `part1.txt` using `code` and answer the questions.
+Open up `part1.txt` using `code`, answer the questions, and save the file!
 
-When you've done so, add a commit with the message "part 1 done!"
+> **NOTE**: Forgetting to save your changes in the editor is a common mistake.
+
+When you've done so, add a commit with the message "part 1 done."
 
 Run `uv run python check.py 1` to check that your commit exists and is correct.
 
